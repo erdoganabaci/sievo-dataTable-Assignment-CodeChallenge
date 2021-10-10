@@ -50,7 +50,11 @@ const DataShowTable = memo(function DataShowTable() {
     <>
       {state && configurationUrl ? (
         <>
-          <input placeholder="Search description..." onChange={onFilter} />
+          <input
+            data-testid={"user-input"}
+            placeholder="Search description..."
+            onChange={onFilter}
+          />
           <br />
           <DataTable columns={columns} data={state} />
         </>
